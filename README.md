@@ -17,6 +17,17 @@ This is a learning project.
 - HTTP client
 - Maven project
 
+## Build
+
+Install [Git](https://git-scm.com), OpenJDK 22 and [Maven](https://maven.apache.org).
+
+```shell
+git clone https://github.com/wadrodrog/Weather.git
+cd Weather
+mvn package
+java -jar target/Weather-1.0-SNAPSHOT.jar
+```
+
 ## License
 
 This project is licensed under MIT License. See [LICENSE](/LICENSE) file.
