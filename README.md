@@ -16,6 +16,7 @@ This is a learning project.
 - JSON parsing org.json
 - HTTP client
 - Maven project
+- JUnit 5 tests
 
 ## Build
 
