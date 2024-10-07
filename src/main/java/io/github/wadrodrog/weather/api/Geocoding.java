@@ -28,7 +28,7 @@ public class Geocoding extends ApiClient {
         addParam("name", query);
 
         // Make request
-        JSONObject jsonObject = makeRequest();
+        JSONObject jsonObject = makeRequest().getJSON();
 
         if (jsonObject.has("results")) {
             return jsonObject.getJSONArray("results");

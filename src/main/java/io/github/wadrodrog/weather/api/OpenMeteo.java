@@ -23,6 +23,6 @@ public class OpenMeteo extends ApiClient {
         addParam("hourly", "temperature_2m");
         addParam("forecast_days", "3");
 
-        return makeRequest();
+        return makeRequest().getJSON();
     }
 }

@@ -1,6 +1,6 @@
 package io.github.wadrodrog.weather.api;
 
-import org.json.JSONObject;
+import io.github.wadrodrog.weather.types.Response;
 
 import java.io.IOException;
 import java.net.URI;
@@ -34,7 +34,7 @@ public class ApiClient {
      *
      * @return  JSON response
      */
-    public JSONObject makeRequest() throws IOException, InterruptedException {
+    public Response makeRequest() throws IOException, InterruptedException {
         // Get current URI and then clear endpoint and params.
         URI uri = getURI();
         endpoint = "";
@@ -43,7 +43,8 @@ public class ApiClient {
         // Make request
         HttpRequest request = HttpRequest.newBuilder(uri).header("accept", "application/json").build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+
+        return new Response(response);
     }
 
     /**
